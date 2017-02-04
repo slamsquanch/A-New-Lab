@@ -15,15 +15,27 @@ class First extends Application
 	 */
 	public function index()
 	{
-		// this is the view we want shown
-		$this->data['pagebody'] = 'justone';
+            // this is the view we want shown
+            $this->data['pagebody'] = 'justone';
 
-		// build the list of authors, to pass on to our view
-		$source = $this->quotes->get('1');
+            // build the list of authors, to pass on to our view
+            $source = $this->quotes->get('1');
 
-                $this->data = array_merge($this->data, $source);
+            $this->data = array_merge($this->data, $source);
 
-		$this->render();
+            $this->render();
 	}
 
+        public function zzz()
+	{
+            // this is the view we want shown
+            $this->data['pagebody'] = 'justone';
+
+            // build the list of authors, to pass on to our view
+            $source = $this->quotes->get('1');
+
+            $this->data = array_merge($this->data, $source);
+
+            $this->render();
+        }
 }
