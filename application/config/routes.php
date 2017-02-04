@@ -53,6 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['lock/(:any)/(:any)'] =  'welcome/shucks';
 $route['sleep'] = 'first/zzz';
 $route['comp(\d+)/(:any)'] = 'wise/bingo';
+$route['([a-z]{4})/bingo'] = 'bingo';
+$route['show/(:num)'] = 'first/gimme/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
